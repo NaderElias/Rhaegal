@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+<Target Name="CopyRustDll" AfterTargets="Build">
+    <Copy SourceFiles="../rust_core/target/release/rust_core.dll" DestinationFolder="$(OutputPath)" />
+</Target>
+
+</Project>
