@@ -4,6 +4,9 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+notify-rust = "4.11.3"
 
+winapi = { version = "0.3", features = ["winuser"] }
+windows = "0.39"
 [lib]
-crate-type = ["cdylib"]
+crate-type = ["cdylib", "rlib"]
