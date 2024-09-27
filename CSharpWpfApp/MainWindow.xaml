@@ -1,8 +1,19 @@
-﻿<Window x:Class="CSharpWpfApp.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+﻿<Window x:Class="SharpVectors.Squiggle.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Rust-C# App" Height="350" Width="525"> 
+        xmlns:svg="http://sharpvectors.codeplex.com/runtime/"
+        Title="Squiggle" Height="480" Width="640">
+
     <Grid>
-        <Button Name="NotifyButton" Content="Click Me!" HorizontalAlignment="Center" VerticalAlignment="Center" Click="NotifyButton_Click"/>
+        <Canvas x:Name="MainCanvas">
+            <!-- SVG Border -->
+            <svg:SvgDrawingCanvas x:Name="SvgViewer" Width="200" Height="200" Background="Transparent"/>
+            <Ellipse Stroke="Red" StrokeThickness="2" Fill="Transparent" Width="200" Height="200" />
+
+            <!-- Buttons with Images -->
+            <Button Width="50" Height="50" Canvas.Left="75" Canvas.Top="25" Click="Button_Click">
+                <Image Source="../../../assets/ss.jpg" Stretch="Uniform"/>
+            </Button>
+        </Canvas>
     </Grid>
 </Window>

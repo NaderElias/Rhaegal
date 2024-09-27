@@ -10,5 +10,21 @@
 <Target Name="CopyRustDll" AfterTargets="Build">
     <Copy SourceFiles="../rust_core/target/release/rust_core.dll" DestinationFolder="$(OutputPath)" />
 </Target>
+<ItemGroup>
+  <None Remove="background.mp4" />
+  
+</ItemGroup>
+<ItemGroup>
+  <Resource Include="background.mp4" />
+</ItemGroup>
+<ItemGroup>
+  <Folder Include="assets\" />
+</ItemGroup>
+<ItemGroup>
+  <PackageReference Include="SharpVectors" Version="1.8.4.2" />
+  <PackageReference Include="SkiaSharp" Version="2.88.8" />
+  <PackageReference Include="SkiaSharp.Views.WPF" Version="2.88.8" />
+  <PackageReference Include="Svg.Skia" Version="2.0.0.1" />
+</ItemGroup>
 
 </Project>
