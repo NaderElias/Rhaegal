@@ -1,37 +1,8 @@
-﻿<Window x:Class="CustomButtonExample.MainWindow"
+﻿<Window x:Class="MindMap.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Custom Circular Button Example" Height="300" Width="300">
-
-    <Window.Resources>
-        <Style x:Key="CircularButtonStyle" TargetType="Button">
-            <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="BorderBrush" Value="Transparent"/>
-            <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Grid>
-                            <!-- Custom Border Image -->
-                            <Ellipse Fill="Transparent" StrokeThickness="20">
-                                <Ellipse.Stroke>
-                                    <ImageBrush ImageSource="C:\Users\Nader Labib\Documents\vs code\Rusting\rhaegal\CSharpWpfApp\assets\lol.png" Stretch="Fill"/>
-                                </Ellipse.Stroke>
-                            </Ellipse>
-
-                            <!-- Button Content -->
-                            <ContentPresenter HorizontalAlignment="Center" 
-                                              VerticalAlignment="Center"/>
-                        </Grid>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    </Window.Resources>
-
-    <Grid>
-        <Button Width="200" Height="200" Click="CustomButton_Click" Style="{StaticResource CircularButtonStyle}">
-            <TextBlock Text="Click Me!" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
-        </Button>
-    </Grid>
+        Title="Mind Map" Height="600" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Canvas Name="MindMapCanvas" Background="White">
+    </Canvas>
 </Window>
