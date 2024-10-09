@@ -1,8 +1,8 @@
 ﻿<Window x:Class="MindMap.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Mind Map" Height="600" Width="800"
-        WindowStartupLocation="CenterScreen">
-    <Canvas Name="MindMapCanvas" Background="White">
-    </Canvas>
+        Title="Mind Map" Height="600" Width="800">
+    <Grid>
+        <Canvas Name="MindMapCanvas" Background="Transparent"/>
+    </Grid>
 </Window>
