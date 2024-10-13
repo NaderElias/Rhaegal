@@ -16,10 +16,10 @@ namespace MindMap
             Button root=mindMapCells.CreateMindMap(); // Start with the root
             Bbutton child_1=mindMapCells.AddNode(root,90,300);
 
-           Bbutton grand =mindMapCells.AddNode(child_1,10,200);
-           Bbutton grands = mindMapCells.AddNode(grand, 40, 200);
-            Bbutton gransd = mindMapCells.AddNode(child_1, 50, 350);
-            Button granssd = mindMapCells.AddNode(child_1, 100, 2000);
+         Bbutton grand =mindMapCells.AddNode(child_1,10,200);
+         //  Bbutton grands = mindMapCells.AddNode(grand, 40, 200);
+           // Bbutton gransd = mindMapCells.AddNode(child_1, 50, 350);
+            //Button granssd = mindMapCells.AddNode(child_1, 100, 2000);
             this.SizeChanged += MainWindow_SizeChanged; // Handle size changes
             this.KeyDown += MainWindow_KeyDown; // Handle key down events
         }
