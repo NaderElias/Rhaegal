@@ -1,32 +1,47 @@
 ﻿<Window x:Class="MindMap.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Mind Map" Height="600" Width="800">
-    <!-- Futuristic window background -->
-    <Window.Background>
-        <RadialGradientBrush>
-            <GradientStop Color="#0D0D0D" Offset="0"/>
-            <!-- Dark gray/black center -->
-            <GradientStop Color="#1A1A1A" Offset="0.3"/>
-            <!-- Slightly lighter gray for depth -->
-            <GradientStop Color="#00E5FF" Offset="0.7"/>
-            <!-- Neon cyan glow -->
-            <GradientStop Color="#FF183048" Offset="1"/>
-            <!-- Dark blue outer edge -->
-        </RadialGradientBrush>
-    </Window.Background>
+        Title="Mind Map"
+        Height="600"
+        Width="800"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        ResizeMode="CanMinimize">
+    <!-- Removes the maximize button -->
 
+    <!-- Main Grid -->
     <Grid>
-        <Canvas Name="MindMapCanvas">
-            <!-- Futuristic canvas background -->
-            <Canvas.Background>
-                <RadialGradientBrush>
-                    <GradientStop Color="#FF003EFF" Offset="-0.2"/>
-                    <GradientStop Color="Black" Offset="1.1"/>
-                    <GradientStop Color="White" Offset="-3"/>
+        <!-- Custom title bar -->
+        <Border Background="#1A1A1A" Height="40" VerticalAlignment="Top" MouseDown="TitleBar_MouseDown">
+            <Grid>
+                <!-- Title text -->
+                <TextBlock Text="Mind Map" VerticalAlignment="Center" Margin="10,0,0,0" FontSize="16" Foreground="White"/>
 
-                </RadialGradientBrush>
-            </Canvas.Background>
-        </Canvas>
+                <!-- Minimize button -->
+                <Button Content="_" Width="30" Height="30" HorizontalAlignment="Right" VerticalAlignment="Center"
+                        Margin="0,0,40,0" Background="Transparent" Foreground="White"
+                        Click="MinimizeWindow"/>
+
+                <!-- Close button -->
+                <Button Content="X" Width="30" Height="30" HorizontalAlignment="Right" VerticalAlignment="Center"
+                        Background="Transparent" Foreground="White"
+                        Click="CloseWindow"/>
+            </Grid>
+        </Border>
+
+        <!-- Main application content below the title bar -->
+        <Grid Margin="0,40,0,0">
+            <Canvas Name="MindMapCanvas" Width="780" Height="540">
+                <!-- Futuristic canvas background -->
+                <Canvas.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FF003EFF" Offset="-0.2"/>
+                        <GradientStop Color="Black" Offset="1.1"/>
+                        <GradientStop Color="White" Offset="-3"/>
+                    </RadialGradientBrush>
+                </Canvas.Background>
+            </Canvas>
+        </Grid>
     </Grid>
 </Window>
